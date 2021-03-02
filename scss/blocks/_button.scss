@@ -1,0 +1,20 @@
+.btn{
+    min-width: 147px;
+    min-height: 35px;
+    background-color: #22262a;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    transition: 0.3s all;
+    cursor: pointer;
+    &:hover{
+        background-color: #fff;
+        color: #22262a;
+        transition: 0.3s all;
+    }
+}
+
+.top__btn{
+    margin-right: 34px;
+    margin-top: 30px;
+}

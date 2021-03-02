@@ -1,0 +1,90 @@
+.top {
+    background: url('../../images/bg/header-bg.jpg')top center / cover no-repeat;
+    height: 745px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 101px;
+    box-shadow: 0px 4px 6px rgba(150, 150, 150, 1);
+
+    // &__wrapper {}
+
+    &__text {
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 650px;
+    }
+
+    &__trand {
+        text-transform: uppercase;
+    }
+
+    &__trand-name {
+        text-transform: uppercase;
+        font-size: 80px;
+        line-height: 120px;
+    }
+
+    &__trand-descr {
+        font-weight: 500;
+
+    }
+}
+
+.models {
+    padding: 121px 0 111px 0;
+}
+
+.model {
+    &__link {
+        display: inline-block;
+        margin-bottom: 20px;
+        &_2 {
+            margin-right: 22px;
+        }
+
+    }
+
+    &__img { 
+        position: relative;
+        transition: 0.4s all;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgb(0, 0, 0);
+            opacity: 0;
+            transition: 0.4s all;
+        }
+
+        &:hover{
+        transform: scale(1.05);
+
+            .catagory__name{
+                opacity: 1;
+                transition: 0.9s opacity;
+
+            }
+
+            &:before{
+            opacity: 0.5;
+
+            }
+        }
+    }
+}
+.catagory__name{
+    position: absolute;
+    text-transform: uppercase;
+    background-color: #fff;
+    font-weight: 500;
+    padding: 0 13px;
+    bottom: 3%;
+    left: 7%;
+    opacity: 0;
+
+}
+
