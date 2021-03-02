@@ -1,10 +1,14 @@
-const swiper = new Swiper('.swiper-container', {
+var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 'auto',
+  spaceBetween: 25,
   loop: true,
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+    
   },
-
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
 });

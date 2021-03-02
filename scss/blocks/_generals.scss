@@ -36,18 +36,20 @@
 }
 
 .model {
+    transition: 0.4s all;
     &__link {
+        position: relative;
         display: inline-block;
         margin-bottom: 20px;
+
         &_2 {
             margin-right: 22px;
         }
 
     }
 
-    &__img { 
-        position: relative;
-        transition: 0.4s all;
+    &__img {
+
         &:before {
             content: '';
             position: absolute;
@@ -58,33 +60,107 @@
             background-color: rgb(0, 0, 0);
             opacity: 0;
             transition: 0.4s all;
+            z-index: 1;
         }
-
-        &:hover{
-        transform: scale(1.05);
-
-            .catagory__name{
-                opacity: 1;
-                transition: 0.9s opacity;
-
+        
+        &:hover {
+            .model{
+                transform: scale(1.05);
+                transition: 0.4s all;
             }
-
-            &:before{
-            opacity: 0.5;
-
+        
+            .catagory__name {
+                opacity: 1;
+                transition: 1s;
+            }
+        
+            &:before {
+                opacity: 0.5;
+                transform: scale(1.05);
+        
             }
         }
     }
 }
-.catagory__name{
+
+.catagory__name {
     position: absolute;
     text-transform: uppercase;
     background-color: #fff;
     font-weight: 500;
     padding: 0 13px;
     bottom: 3%;
-    left: 7%;
+    left: 3%;
     opacity: 0;
+    z-index: 4;
 
 }
 
+.catalog{
+
+    &__card{
+        width: 268px;
+        height: 371px;
+        object-fit: cover;
+    }
+    &__img-wrapper{
+        display: inline-block;
+        overflow: hidden;
+        
+
+    }
+    
+    &__img{
+        transition: 0.4s all;
+        &:hover {
+            transform: scale(1.05);
+            transition: 0.4s all;
+       }
+    }
+
+    .swiper-container{
+        padding:72px 0 110px 0;
+    }
+
+    .swiper-slide{
+        width: 268px;
+    }
+    .swiper-button-prev {
+        z-index: 1;
+    }
+    .swiper-button-next {
+        z-index: 1;
+    }
+}
+
+.dress{
+    &__wrapper{
+        display: flex;
+        position: relative;
+        align-items: start;
+        padding-top: 64px;
+        margin-bottom: 121px;
+        height: 750px;
+
+        .dress__img{
+
+            &_1{
+                align-self: flex-end;
+            }
+            &_2{
+                margin: 0 25px;
+            }
+            &_3{
+                border-left: 25px solid rgb(255, 255, 255);
+                border-top: 25px solid rgb(255, 255, 255);
+            }
+        }
+    }
+    &__show-dress{
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
