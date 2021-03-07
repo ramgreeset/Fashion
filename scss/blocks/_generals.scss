@@ -37,6 +37,7 @@
 
 .model {
     transition: 0.4s all;
+
     &__link {
         position: relative;
         display: inline-block;
@@ -62,22 +63,22 @@
             transition: 0.4s all;
             z-index: 1;
         }
-        
+
         &:hover {
-            .model{
+            .model {
                 transform: scale(1.05);
                 transition: 0.4s all;
             }
-        
+
             .catagory__name {
                 opacity: 1;
                 transition: 1s;
             }
-        
+
             &:before {
                 opacity: 0.5;
                 transform: scale(1.05);
-        
+
             }
         }
     }
@@ -96,45 +97,49 @@
 
 }
 
-.catalog{
+.catalog {
 
-    &__card{
+    &__card {
         width: 268px;
         height: 371px;
         object-fit: cover;
     }
-    &__img-wrapper{
+
+    &__img-wrapper {
         display: inline-block;
         overflow: hidden;
-        
+
 
     }
-    
-    &__img{
+
+    &__img {
         transition: 0.4s all;
+
         &:hover {
             transform: scale(1.05);
             transition: 0.4s all;
-       }
+        }
     }
 
-    .swiper-container{
-        padding:72px 0 110px 0;
+    .swiper-container {
+        padding: 72px 0 110px 0;
     }
 
-    .swiper-slide{
+    .swiper-slide {
         width: 268px;
     }
+
     .swiper-button-prev {
         z-index: 1;
     }
+
     .swiper-button-next {
         z-index: 1;
     }
 }
 
-.dress{
-    &__wrapper{
+.dress {
+    &__wrapper {
         display: flex;
         position: relative;
         align-items: start;
@@ -142,25 +147,50 @@
         margin-bottom: 121px;
         height: 750px;
 
-        .dress__img{
+        &:hover .dress__link::after {
+            width: 100%;
+            transition: 0.4s all;
+        }
 
-            &_1{
+        .dress__img {
+
+            &_1 {
                 align-self: flex-end;
             }
-            &_2{
+
+            &_2 {
                 margin: 0 25px;
             }
-            &_3{
+
+            &_3 {
                 border-left: 25px solid rgb(255, 255, 255);
                 border-top: 25px solid rgb(255, 255, 255);
             }
         }
     }
-    &__show-dress{
+
+    &__show-dress {
         display: flex;
         align-items: flex-end;
         position: absolute;
         right: 0;
         bottom: 0;
+    }
+
+    &__link {
+        text-transform: uppercase;
+        position: relative;
+
+        &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 0;
+            background-color: #000;
+            bottom: 0;
+            right: 0;
+            transition: 0.4s all;
+        }
     }
 }
